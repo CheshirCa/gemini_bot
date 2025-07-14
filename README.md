@@ -29,10 +29,19 @@ pip install python-telegram-bot google-generativeai python-dotenv
 Создайте файл `.env` в папке с ботом и добавьте:  
 ```
 TELEGRAM_BOT_TOKEN=ваш_токен_бота  
-GEMINI_API_KEY=ваш_gemini_api_ключ  
+GEMINI_API_KEY=ваш_gemini_api_ключ
 TARGET_CHAT_IDS=-1001234567890,-1000987654321  # ID чатов через запятую  
 TRIGGER=ИИ запрос:  # Триггерное слово  
 ```  
+или напрямую укажите в тексте скрипта указанные значения:
+```
+GEMINI_API_KEY = "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ"  # Получить тут: https://aistudio.google.com/app/apikey
+TELEGRAM_BOT_TOKEN = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"  # Токен бота от @BotFather
+TARGET_CHAT_IDS = [-1001234567890, -1000987654321]  # Список ID чатов/каналов
+TRIGGER = "ИИ запрос:" # Триггерное слово  
+MODEL_NAME = "gemini-1.5-flash" # Модель ИИ
+MAX_PROMPT_LENGTH = 1000  # Максимальная длина промта
+```
 
 #### **5. Запуск бота**  
 Сохраните код бота в файл `bot.py` и запустите:  
